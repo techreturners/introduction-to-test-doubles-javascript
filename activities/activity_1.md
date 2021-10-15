@@ -64,8 +64,7 @@ TODO
 
 ---
 
-- Look at the [bubble_tea_order_service](../src/bubble_tea_order_service.js)
-  class. What two dependencies does the service have?
+- Look at the [bubble_tea_order_service](../src/bubble_tea_order_service.js) file. What two dependencies does the service have?
 
 <details>
 <summary>Click here to see the answer</summary>
