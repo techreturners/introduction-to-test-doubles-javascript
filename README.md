@@ -27,7 +27,18 @@ You will be exploring a simplified version of a Bubble Tea Order Service System.
 
 ### Running the Unit Tests
 
-You can run the unit tests in your terminal by running `npm install` followed by `npm test`.
+You can run the unit tests in your terminal by running:
+
+`npm install` 
+ 
+ Followed by: 
+ 
+ `npm test`
+
+ ### Note
+
+The [Google JavaScript style guide](https://google.github.io/styleguide/jsguide.html) has been followed for this repository.
+
 
 ## What's Next?
 Feel free to head back to review the concepts again.
