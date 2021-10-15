@@ -78,13 +78,17 @@ TODO
 
 ---
 
-- What types of Bubble Tea does the [BubbleTeaTypeEnum](../src/main/java/com/techreturners/bubbleteaordersystem/model/BubbleTeaTypeEnum.java) have?
+- What types of Bubble Tea does the [bubble_tea_type](../src/bubble_tea_type.js) have?
 
 <details>
 <summary>Click here to see the answer</summary>
 <pre>
 
-TODO
+OolongMilkTea
+JasmineMilkTea
+MatchaMilkTea
+PeachIceTea
+LycheeIceTea
 
 </pre>
 </details>
