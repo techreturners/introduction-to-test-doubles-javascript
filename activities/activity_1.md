@@ -95,46 +95,6 @@ LycheeIceTea
 
 ---
 
-- What does Encapsulation mean from the four pillars of Object-Oriented Programming?
-
-<details>
-<summary>Click here to see the answer</summary>
-<pre>
-
-Encapsulation means hiding the details of an object which is not supposed to be open for interaction publicly.
-
-</pre>
-</details>
-
----
-
-- In the [DebitCard](../src/main/java/com/techreturners/bubbleteaordersystem/model/DebitCard.java) class,
-  can you identify which line of code represents the `getter`?
-  
-<details>
-<summary>Click here to see the answer</summary>
-<pre>
-
-DebitCard - Line 11
-
-```
-
-public String getDigits() {
-  return this.DIGITS;
-}
-
-```
-
-The getter `getDigits` has a private backing field `private final String DIGITS;`
-
-This keeps the class well-encapsulated, so that the Debit Card Digits won't be tampered with
-after it's been set by the constructor.
-
-</pre>
-</details>
-
----
-
 ### 🥳 Yay! Next Steps
 
 You can now head over to [Activity 2 - Test Doubles - Dummy](activity_2.md).
