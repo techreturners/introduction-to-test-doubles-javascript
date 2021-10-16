@@ -1,4 +1,4 @@
-const sendBubbleTeaOrderRequestEmail = require('./bubble_tea_messenger');
+const bubbleTeaMessenger = require('./bubble_tea_messenger');
 const logMessage = require('./simple_logger');
 
 const createOrderRequest = (bubbleTeaRequest) => {
@@ -30,7 +30,7 @@ const createOrderRequest = (bubbleTeaRequest) => {
 };
 
 const sendEmail = (orderRequest) => {
-  sendBubbleTeaOrderRequestEmail(orderRequest);
+  bubbleTeaMessenger.sendBubbleTeaOrderRequestEmail(orderRequest);
 };
 
 module.exports = {
