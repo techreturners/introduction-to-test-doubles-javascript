@@ -22,5 +22,9 @@ test('test successful bubble tea order request', () => {
     },
   };
 
-  createOrderRequest(bubbleTeaRequest);
+  // Act
+  const orderRequest = createOrderRequest(bubbleTeaRequest);
+
+  // Assert
+  expect(orderRequest.name).toBe(dummyPaymentDetails.name);
 });
