@@ -1,7 +1,7 @@
 const {createOrderRequest} = require('./bubble_tea_order_service');
 const bubbleTeaType = require('./bubble_tea_type');
-const bubbleTeaMessenger = require('./bubble_tea_messenger');
-const sendEmailSpy = jest.spyOn(bubbleTeaMessenger, 'sendBubbleTeaOrderRequestEmail');
+const messenger = require('./bubble_tea_messenger');
+const emailSpy = jest.spyOn(messenger, 'sendBubbleTeaOrderRequestEmail');
 
 let dummyPaymentDetails;
 
@@ -34,6 +34,6 @@ test('test successful bubble tea order request when using a spy', () => {
   // Assert
   expect(orderRequest.name).toBe(dummyPaymentDetails.name);
   expect(orderRequest.digits).toBe(dummyPaymentDetails.debitCard.digits);
-  expect(sendEmailSpy).toHaveBeenCalledWith(orderRequest);
-  expect(sendEmailSpy).toHaveBeenCalledTimes(1);
+  expect(emailSpy).toHaveBeenCalledWith(orderRequest);
+  expect(emailSpy).toHaveBeenCalledTimes(1);
 });

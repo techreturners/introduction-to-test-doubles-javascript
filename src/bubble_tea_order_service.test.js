@@ -34,6 +34,8 @@ test('test successful bubble tea order request', () => {
   // Assert
   expect(orderRequest.name).toBe(dummyPaymentDetails.name);
   expect(orderRequest.digits).toBe(dummyPaymentDetails.debitCard.digits);
-  expect(bubbleTeaMessenger.sendBubbleTeaOrderRequestEmail).toHaveBeenCalledWith(orderRequest);
-  expect(bubbleTeaMessenger.sendBubbleTeaOrderRequestEmail).toHaveBeenCalledTimes(1);
+  expect(bubbleTeaMessenger.sendBubbleTeaOrderRequestEmail)
+      .toHaveBeenCalledWith(orderRequest);
+  expect(bubbleTeaMessenger.sendBubbleTeaOrderRequestEmail)
+      .toHaveBeenCalledTimes(1);
 });

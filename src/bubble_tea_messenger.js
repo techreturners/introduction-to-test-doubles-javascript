@@ -9,7 +9,7 @@ const sendBubbleTeaOrderRequestEmail = function(bubbleTeaOrderRequest) {
   // to send an email over SMTP
   logMessage(`Yay! I just sent the Order Request email for the following `+
   `Bubble Tea Order Request: ${JSON.stringify(bubbleTeaOrderRequest)}`);
-}
+};
 
 module.exports = {
   sendBubbleTeaOrderRequestEmail,
