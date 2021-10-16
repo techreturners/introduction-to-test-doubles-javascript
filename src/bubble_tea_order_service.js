@@ -10,8 +10,8 @@ const createOrderRequest = (bubbleTeaRequest) => {
       name,
       address,
       debitCard: {digits},
-      bubbleTea: {type},
     },
+    bubbleTea: {type},
   } = bubbleTeaRequest;
 
   const orderRequest = {
