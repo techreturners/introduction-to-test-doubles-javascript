@@ -3,11 +3,11 @@
  * @enum {string}
  */
 const BubbleTeaType = {
-    OOLONGMILKTEA: 'OolongMilkTea',
-    JASMINEMILKTEA: 'JasmineMilkTea',
-    MATCHAMILKTEA: 'MatchaMilkTea',
-    PEACHICETEA: 'PeachIceTea',
-    LYCHEEICETEA: 'LycheeIceTea'
+  OOLONGMILKTEA: 'OolongMilkTea',
+  JASMINEMILKTEA: 'JasmineMilkTea',
+  MATCHAMILKTEA: 'MatchaMilkTea',
+  PEACHICETEA: 'PeachIceTea',
+  LYCHEEICETEA: 'LycheeIceTea',
 };
 
-export default BubbleTeaType;
+module.exports = BubbleTeaType;
