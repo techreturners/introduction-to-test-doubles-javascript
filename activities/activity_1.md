@@ -43,13 +43,12 @@ A test double is any kind of pretend object used in place of a real object for t
 <details>
 <summary>Click here to see the answer</summary>
 <pre>
-
 dummyPaymentDetails = {
-    name: 'Some person',
-    address: '123 Some Street',
-    debitCard: {
-      digits: '123456',
-    },
+  name: 'Some person',
+  address: '123 Some Street',
+  debitCard: {
+    digits: '123456',
+  },
 };
 
 </pre>
