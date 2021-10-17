@@ -38,39 +38,51 @@ A test double is any kind of pretend object used in place of a real object for t
 
 ---
 
-- In the [test files](../src) (those with the 'test.js' extension) within the **src** folder, can you identify lines in the file that show the creation of a test dummy?
+- In the [bubble_tea_order_service](../src/bubble_tea_order_service.test.js) test, can you identify lines in the file that show the creation of a test dummy?
 
 <details>
 <summary>Click here to see the answer</summary>
 <pre>
 
-TODO
+dummyPaymentDetails = {
+  name: 'Some person',
+  address: '123 Some Street',
+  debitCard: {
+    digits: '123456',
+  },
+};
 
 </pre>
 </details>
 
 ---
 
-- In the [test files](../src) (those with the 'test.js' extension) within the **src** folder, can you identify lines in the file that show the creation of a 'Stub'?
+- In the [bubble_tea_roulette_service](../src/bubble_tea_roulette_service.test.js) test, can you identify lines in the file that show the creation of a 'Stub'?
 
 <details>
 <summary>Click here to see the answer</summary>
 <pre>
 
-TODO
+// Bit of a tricky one because we utilise the spyOn 
+// Jest function to stub the return of 0.2
+// Stub to calls to Math.random to return 0.2
+jest.spyOn(global.Math, 'random').mockReturnValue(0.2);
 
 </pre>
 </details>
 
 ---
 
-- Look at the [bubble_tea_order_service](../src/bubble_tea_order_service.js) file. What two dependencies does the service have?
+- Look at the [bubble_tea_order_service](../src/bubble_tea_order_service.js). What two dependencies does the service have?
 
 <details>
 <summary>Click here to see the answer</summary>
 <pre>
 
-TODO
+Bubble Tea Messenger and the Simple Logger
+
+const bubbleTeaMessenger = require('./bubble_tea_messenger');
+const logMessage = require('./simple_logger');
 
 </pre>
 </details>

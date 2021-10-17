@@ -2,7 +2,7 @@ const getRandomBubbleTeaType = require('./bubble_tea_roulette_service');
 
 test('should generate random bubble tea', () => {
   // Arrange
-  // Spy and control Math.random calls
+  // Stub to calls to Math.random to return 0.2
   jest.spyOn(global.Math, 'random').mockReturnValue(0.2);
 
   // Act
@@ -11,6 +11,6 @@ test('should generate random bubble tea', () => {
   // Assert
   expect(bubbleTea).toBe('JASMINEMILKTEA');
 
-  // Reset random to default status
+  // Restore the default Math.random
   jest.spyOn(global.Math, 'random').mockRestore();
 });
