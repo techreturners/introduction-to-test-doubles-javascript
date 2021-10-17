@@ -17,7 +17,7 @@ Arrange, Act, Assert is a useful structure to help you plan and write your tests
 - Arranging any test data and objects you might need to run your unit test
 
 #### Act
-- This is your action, what you do to run your code to produce a result i.e. calling your method
+- This is your action, what you do to run your code to produce a result i.e. calling your function
 
 #### Assert
 - What you’re expecting to see i.e. what your function should(!) return
@@ -44,7 +44,7 @@ Arrange, Act, Assert is a useful structure to help you plan and write your tests
 we would like a unit test to check that:
   
   - **Given** a `Bubble Tea Request` (represented as JSON)
-  - **When** the `bubble_tea_order_service`'s `createOrderRequest()` method is called with that `Bubble Tea Request`
+  - **When** the `bubble_tea_order_service`'s `createOrderRequest()` function is called with that `Bubble Tea Request`
   - **Then** a `Bubble Tea Order Request` is created successfully, and the BubbleTeaOrderRequest is sent over email ✉️
   
 ```
@@ -55,7 +55,7 @@ It is helpful to specify the conditions we can check something against to ensure
 
 ```
 
-- The acceptance criteria is captured by the test method called: 
+- The acceptance criteria is captured by the test function: 
 
 ```
 test('test successful bubble tea order request', () => {
@@ -70,7 +70,7 @@ test('test successful bubble tea order request', () => {
 Here's a summary of what we need to do for Arrange, Act, Assert:
 
 - **Assert**
-  - Check that the result we get from calling the `bubble_tea_order_service`'s `createOrderRequest` method 
+  - Check that the result we get from calling the `bubble_tea_order_service`'s `createOrderRequest` function 
 produces the expected `JSON` response.
   
 

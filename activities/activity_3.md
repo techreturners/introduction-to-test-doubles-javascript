@@ -6,7 +6,7 @@
 
 - **Given** a `Bubble Tea Request` (represented as JSON)
 
-- **When** the `bubble_tea_order_service`'s `createOrderRequest()` method is called with that `Bubble Tea Request`
+- **When** the `bubble_tea_order_service`'s `createOrderRequest()` function is called with that `Bubble Tea Request`
 
 - **Then** a `Bubble Tea Order Request` is created successfully, and the BubbleTeaOrderRequest is sent over email ✉️
 
@@ -35,7 +35,7 @@ Firstly, let's remind ourselves what a Mock is.
 <pre>
 
 Mock objects enable you to check (verify) that expected calls and actions have been performed, 
-e.g. checking a function/method has been called an expected number of times.
+e.g. checking a function has been called an expected number of times.
 
 </pre>
 </details>
@@ -61,11 +61,11 @@ which contains the functionality to send an email.
 
 The `sendBubbleTeaOrderRequestEmail` function on line 7 doesn't return anything.
 
-The `sendBubbleTeaOrderRequestEmail()` function is a command type method.
+The `sendBubbleTeaOrderRequestEmail()` function is a command type.
   
-A Command is a word used to describe methods that don’t have a return value, but they perform an action which changes a system’s state.
+A Command is a word used to describe functions that don’t have a return value, but they perform an action which changes a system’s state.
   
-There is no way to test if the method worked as expected if nothing is being returned from it.
+There is no way to test if the function worked as expected if nothing is being returned from it.
   
 Also, we don't really want to use the actual `bubble_tea_messenger` in our unit tests, since we don't want to be sending actual emails everytime we run our tests.
   
@@ -78,10 +78,8 @@ This is why we can use Mock objects.
 
 ### 🔎 Exercise 3.3 - 🏊 Deep Diving into Mocks
 
-- Each programming language will have frameworks to enable developers to use out of the box methods to create
-  and apply test doubles.
+- Each programming language will have frameworks to enable developers to use out of the box functions to create and apply test doubles.
   
-
 - For JavaScript, one useful framework is [Jest](https://jestjs.io/).
   
 ---
@@ -109,7 +107,7 @@ jest.mock('./bubble_tea_messenger');
 ---
 
 - In the [bubble_tea_order_service.test.js](../src/bubble_tea_order_service.test.js)  file, which line of code
-verifies that the mock `bubble_tea_messenger`'s `sendBubbleTeaOrderRequestEmail()` method was called with the correct JSON representing a **Bubble Tree Order Request**?
+verifies that the mock `bubble_tea_messenger`'s `sendBubbleTeaOrderRequestEmail()` function was called with the correct JSON representing a **Bubble Tree Order Request**?
   
 <details>
 <summary>Click here to see the answer</summary>
@@ -124,7 +122,7 @@ expect(bubbleTeaMessenger.sendBubbleTeaOrderRequestEmail)
 
 ---
 
-- We can also verify the number of times the `mockMessenger`'s `sendBubbleTeaOrderRequestEmail()` method was called
+- We can also verify the number of times the `mockMessenger`'s `sendBubbleTeaOrderRequestEmail()` function was called
   
 ```
 expect(bubbleTeaMessenger.sendBubbleTeaOrderRequestEmail).toHaveBeenCalledTimes(1);
@@ -141,5 +139,4 @@ You can now head over to [Activity 4 - Test Doubles - Stub](activity_4.md).
 
 ### Key Study Notes
 
-☑️ Mock objects enable you to check (verify) that expected calls and actions have been performed,
-e.g. checking a function/method has been called an expected number of times.
+☑️ Mock objects enable you to check (verify) that expected calls and actions have been performed, e.g. checking a function has been called an expected number of times.
