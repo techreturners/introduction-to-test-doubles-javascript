@@ -2,6 +2,7 @@ const {createOrderRequest} = require('./bubble_tea_order_service');
 const bubbleTeaType = require('./bubble_tea_type');
 const bubbleTeaMessenger = require('./bubble_tea_messenger');
 jest.mock('./bubble_tea_messenger');
+jest.mock('./simple_logger');
 
 let dummyPaymentDetails;
 

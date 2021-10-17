@@ -55,7 +55,13 @@ It is helpful to specify the conditions we can check something against to ensure
 
 ```
 
-- The acceptance criteria is captured by the test method called `TODO()`
+- The acceptance criteria is captured by the test method called: 
+
+```
+test('test successful bubble tea order request', () => {
+// test is in here
+});
+```
 
 ---
 
@@ -64,8 +70,8 @@ It is helpful to specify the conditions we can check something against to ensure
 Here's a summary of what we need to do for Arrange, Act, Assert:
 
 - **Assert**
-  - Check that the result we get from calling the `BubbleTeaOrderService`'s `createOrderRequest` method 
-produces the expected `BubbleTeaOrderRequest`
+  - Check that the result we get from calling the `bubble_tea_order_service`'s `createOrderRequest` method 
+produces the expected `JSON` response.
   
 
 - **Act** 
@@ -122,62 +128,47 @@ our SUT is working as a component of our codebase without external influence.
 
 - This is where you'll find a lot of discussion in the industry on how to test. Aside from the jargon and theory behind it, the main point is that you understand what is needed to test against your acceptance criteria.
 
-- For demonstration purposes, we've chosen to use a Dummy to substitute in place of the `SimpleLoggerImpl`. 
+- For demonstration purposes, we has to create some dummy information to ensure our test functions.
   
-- In [Activity 1](activity_1.md), we identified the `DummySimpleLogger` as a Dummy.
+- In [Activity 1](activity_1.md), we also identified a few dummy objects that were created in order to ensure the correct JSON objects were supplied as inputs such as:
   
 ---
 
 #### 👀 Let's trace through how this works!
 
-- Navigate to the [BubbleTeaOrderServiceTest.java](../src/test/java/BubbleTeaOrderServiceTest.java) file.
+- Navigate to the [bubble_tea_order_service.test.js](../src/bubble_tea_order_service.test.js) file.
 
 
-- Can you identify the line of code where the `DummySimpleLogger` is being created?
+- Can you identify the lines of code where the dummy object is being created?
 
 <details>
 <summary>Click here to see the answer</summary>
 <pre>
-
-//BubbleTeaOrderServiceTest - Line 24
-
-dummySimpleLogger = new DummySimpleLogger();
+dummyPaymentDetails = {
+  name: 'Some person',
+  address: '123 Some Street',
+  debitCard: {
+    digits: '123456',
+  },
+};
 
 </pre>
 </details>
 
 ---
 
-- Can you identify the line of code where the `dummySimpleLogger` is passed as an 
-argument to the `BubbleTeaOrderService` constructor?
+- Have a read of the [Jest documentation](https://jestjs.io/docs/mock-functions) regarding the `mock` function.
+
+
+- In your own words can you describe why the `dummyPaymentDetails` is being created?
 
 <details>
-<summary>Click here to see the answer</summary>
+<summary>Click here to see a sample answer</summary>
 <pre>
 
-//BubbleTeaOrderServiceTest - Line 26
+The `createOrderRequest` function of the **bubble_tea_order_service** requires an input which is a JSON object that contains paymentDetails and a type of bubble tea.
 
-bubbleTeaOrderService = new BubbleTeaOrderService(dummySimpleLogger, mockMessenger);
-
-👉 The `dummySimpleLogger` is a Dummy that's solely there to stand in for the `SimpleLoggerImpl` parameter.
-
-</pre>
-</details>
-
----
-
-- Open up and explore the [DummySimpleLogger](../src/test/java/testhelper/DummySimpleLogger.java).
-
-
-- In your own words can you describe what the `DummySimpleLogger` is doing?
-
-<details>
-<summary>Click here to see a summary</summary>
-<pre>
-
-The `DummySimpleLogger` implements the `SimpleLoggerImpl` interface.
-It has a `addLoggingText` method.
-You can see that it isn't doing anything with the method.
+The `dummyPaymentDetails` represents a sample (or dummy) of what that data might look like.
 
 </pre>
 </details>
