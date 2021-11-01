@@ -33,8 +33,7 @@ Arrange, Act, Assert is a useful structure to help you plan and write your tests
 - When we're figuring out what we would like to test, we start with what we are checking for,
   i.e. our assertion.
   
-  
-- Navigate to the [bubble_test_order_service.test.js](../src/bubble_test_order_service.test.js) file.
+- Navigate to the [bubble_tea_order_service.test.js](../src/bubble_tea_order_service.test.js) file.
   
 
 - Our System Under Test (SUT) is the `bubble_tea_order_service`. This is the thing we are focusing on for our unit test.
