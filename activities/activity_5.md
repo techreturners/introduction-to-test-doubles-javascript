@@ -68,7 +68,7 @@ We encourage you to do some of your own research and experimentation in your own
 ### Extension
 
 - Can you find a way to test multiple different Bubble Tea Requests without having to repeat the same test code again
-and again? **Hint**: You may want to have a think about test parameterisation.
+and again? **Hint**: You may want to have a think about Jest test parameterisation 🤔.
   
 ---
 ### Key Study Notes
