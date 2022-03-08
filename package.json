@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/techreturners/introduction-to-test-doubles-javascript#readme",
   "dependencies": {
-    "jest": "^27.2.5"
+    "jest": "^27.5.1"
   },
   "devDependencies": {
-    "eslint": "^8.0.1",
+    "eslint": "^8.10.0",
     "eslint-config-google": "^0.14.0"
   }
 }
