@@ -107,7 +107,7 @@ jest.mock('./bubble_tea_messenger');
 ---
 
 - In the [bubble_tea_order_service.test.js](../src/bubble_tea_order_service.test.js)  file, which line of code
-verifies that the mock `bubble_tea_messenger`'s `sendBubbleTeaOrderRequestEmail()` function was called with the correct JSON representing a **Bubble Tree Order Request**?
+verifies that the mock `bubble_tea_messenger`'s `sendBubbleTeaOrderRequestEmail()` function was called with the correct JSON representing a **Bubble Tea Order Request**?
   
 <details>
 <summary>Click here to see the answer</summary>
