@@ -9,5 +9,7 @@ test.each`
   `('gets randomBubbleTeaType $input expects $expectedResult',
     ({input, expectedResult}) => {
       jest.spyOn(global.Math, 'random').mockReturnValue(input);
-      expect(getRandomBubbleTeaType()).toBe(expectedResult);
+      const bubbleTea = getRandomBubbleTeaType();
+      expect(bubbleTea).toBe(expectedResult);
+      jest.spyOn(global.Math, 'random').mockRestore;
     });
